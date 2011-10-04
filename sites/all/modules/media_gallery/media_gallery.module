@@ -1447,7 +1447,8 @@ function media_gallery_styles_default_styles() {
  * Implements hook_styles_default_presets_alter().
  */
 function media_gallery_styles_default_presets_alter(&$styles) {
-  foreach (array_keys(media_gallery_image_default_styles()) as $image_style) {
+   
+    foreach (array_keys(media_gallery_image_default_styles()) as $image_style) {
     foreach (array('image', 'media_youtube') as $container) {
       $styles['file']['containers'][$container]['styles'][$image_style]['default preset'] = $image_style;
       $styles['file']['containers'][$container]['presets'][$image_style] = array(
@@ -1489,6 +1490,7 @@ function media_gallery_styles_presets() {
       ),
     ),
   );
+  
   return $presets;
 }
 

@@ -1,0 +1,34 @@
+<?php
+/**
+ * @file
+ * This is an example outlining how a module can define blocks that can be
+ * displayed on various pages of a site, or how to alter blocks provided by
+ * other modules.
+ */
+
+ 
+ /**
+ * Implementation of hook_menu().
+ *
+ * @return array
+ */
+function myalterform_styles_default_presets_alter(&$styles) {
+
+
+if(isset($styles['media']['containers']['image']['styles']['media_gallery_thumbnail']['preset'])){
+unset($styles['media']['containers']['image']['styles']['media_gallery_thumbnail']['preset']);
+}
+
+if(isset($styles['media']['containers']['image']['styles']['media_gallery_large']['preset'])){
+unset($styles['media']['containers']['image']['styles']['media_gallery_large']['preset']);
+}
+
+//echo '<pre>';
+//print_r($styles);
+//echo '</pre>';
+return $styles;
+  }
+  function myalterform_init() {
+
+	//exit('hello');
+  }

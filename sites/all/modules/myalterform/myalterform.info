@@ -1,0 +1,10 @@
+name = My Alter Form
+description = This module is used to alter existing core form.
+package = Custom
+core = 7.x
+files[] = myalterform.module
+; Information added by sanjeev on 2011-06-27
+version = "7.x-1"
+core = "7.x"
+project = "MY Alter Form"
+
